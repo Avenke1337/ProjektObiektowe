@@ -26,8 +26,11 @@ Dziedziczy name, price, id
 Metoda: applyDiscount()
 Ten interfejs może być implementowany przez każdą z klas dziedziczących.
 
+4. Card
+koszyk
 
-4. Klasa główna: Main
+
+5. Klasa główna: Main
 
 Tworzy listę produktów różnych typów (Book, Electronics, Clothing)
 Zastosowuje zniżki poprzez wywołanie applyDiscount() dla obiektów implementujących Discountable
