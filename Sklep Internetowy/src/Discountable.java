@@ -1,2 +1,2 @@
-public class Discountable {
+public interface Discountable {
 }
