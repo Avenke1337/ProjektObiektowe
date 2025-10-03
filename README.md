@@ -1,20 +1,5 @@
 Projekt sklepu internetowego
-Opis
-
-Projekt demonstruje podejście obiektowe w Javie na przykładzie sklepu internetowego.
-Zawiera hierarchię klas reprezentujących produkty (książki, elektronikę, ubrania), interfejs rabatowy oraz klasę koszyka umożliwiającą dodawanie produktów, obliczanie cen i stosowanie rabatów.
-
-Celem projektu jest pokazanie:
-
-dziedziczenia,
-
-polimorfizmu,
-
-wykorzystania interfejsów,
-
-enkapsulacji,
-
-oraz prostego przepływu działania programu w klasie Main.
+OPIS DZIALANIA KLAS I INTERFEJSU
 
 Struktura projektu
 Klasy i interfejsy
