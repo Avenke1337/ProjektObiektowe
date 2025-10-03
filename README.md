@@ -1,37 +1,81 @@
-Klasa bazowa: Product
+Projekt sklepu internetowego
+Opis
 
-Atrybuty:
-name – nazwa produktu (np. "Harry Potter")
-price – cena produktu (np. 59.99)
-id – unikalny identyfikator produktu
-To jest klasa ogólna, z której będą dziedziczyć konkretne typy produktów.
+Projekt demonstruje podejście obiektowe w Javie na przykładzie sklepu internetowego.
+Zawiera hierarchię klas reprezentujących produkty (książki, elektronikę, ubrania), interfejs rabatowy oraz klasę koszyka umożliwiającą dodawanie produktów, obliczanie cen i stosowanie rabatów.
 
-2. Klasy dziedziczące (rozszerzające klasę Product)
+Celem projektu jest pokazanie:
+
+dziedziczenia,
+
+polimorfizmu,
+
+wykorzystania interfejsów,
+
+enkapsulacji,
+
+oraz prostego przepływu działania programu w klasie Main.
+
+Struktura projektu
+Klasy i interfejsy
+Product
+
+Klasa abstrakcyjna, bazowa dla wszystkich produktów.
+
+Posiada podstawowe atrybuty: name, price, id.
+
+Definiuje wspólne zachowania (toString(), gettery/settery).
 
 Book
-Dziedziczy name, price, id
-author
+
+Dziedziczy po Product.
+
+Dodatkowe atrybuty: author.
+
+Może implementować interfejs Discountable, aby obsługiwać rabaty (np. zniżka na książki).
 
 Electronics
-Dziedziczy name, price, id
-brand, warranty
+
+Dziedziczy po Product.
+
+Dodatkowe atrybuty: brand, warranty (gwarancja w miesiącach).
+
+Może implementować Discountable, np. rabat uzależniony od długości gwarancji.
 
 Clothing
-Dziedziczy name, price, id
- size, color
 
+Dziedziczy po Product.
 
+Dodatkowe atrybuty: size, color.
 
-3. Interfejs: Discountable
-Metoda: applyDiscount()
-Ten interfejs może być implementowany przez każdą z klas dziedziczących.
+Może implementować Discountable, np. sezonowe obniżki cen.
 
-4. Card
-koszyk
+Discountable (interfejs)
 
+Deklaruje metodę applyDiscount().
 
-5. Klasa główna: Main
+Umożliwia różnym klasom własną implementację mechanizmu rabatowego.
 
-Tworzy listę produktów różnych typów (Book, Electronics, Clothing)
-Zastosowuje zniżki poprzez wywołanie applyDiscount() dla obiektów implementujących Discountable
-Wyświetla zawartość koszyka (listę produktów z ich cenami po zniżkach)
+Cart
+
+Reprezentuje koszyk zakupowy.
+
+Przechowuje listę produktów.
+
+Główne metody:
+
+addProduct(Product p) – dodawanie produktów,
+
+applyDiscounts() – stosuje rabaty dla wszystkich elementów implementujących Discountable,
+
+totalPriceBeforeDiscounts() – suma cen przed rabatami,
+
+totalPriceAfterDiscounts() – suma cen po rabatach,
+
+printCartContents() – wypisuje zawartość koszyka.
+
+Main
+
+Klasa uruchomieniowa.
+
+Tworzy przykładowe produkty (Book, Electronics, Clothing), dodaje je do koszyka, nakłada rabaty i prezentuje zawartość koszyka.
