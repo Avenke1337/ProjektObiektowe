@@ -18,7 +18,7 @@ oraz prostego przepływu działania programu w klasie Main.
 
 Struktura projektu
 Klasy i interfejsy
-Product
+- Product
 
 Klasa abstrakcyjna, bazowa dla wszystkich produktów.
 
@@ -26,7 +26,7 @@ Posiada podstawowe atrybuty: name, price, id.
 
 Definiuje wspólne zachowania (toString(), gettery/settery).
 
-Book
+- Book
 
 Dziedziczy po Product.
 
@@ -34,7 +34,7 @@ Dodatkowe atrybuty: author.
 
 Może implementować interfejs Discountable, aby obsługiwać rabaty (np. zniżka na książki).
 
-Electronics
+- Electronics
 
 Dziedziczy po Product.
 
@@ -42,7 +42,7 @@ Dodatkowe atrybuty: brand, warranty (gwarancja w miesiącach).
 
 Może implementować Discountable, np. rabat uzależniony od długości gwarancji.
 
-Clothing
+- Clothing
 
 Dziedziczy po Product.
 
@@ -56,7 +56,7 @@ Deklaruje metodę applyDiscount().
 
 Umożliwia różnym klasom własną implementację mechanizmu rabatowego.
 
-Cart
+- Cart
 
 Reprezentuje koszyk zakupowy.
 
@@ -74,7 +74,7 @@ totalPriceAfterDiscounts() – suma cen po rabatach,
 
 printCartContents() – wypisuje zawartość koszyka.
 
-Main
+- Main
 
 Klasa uruchomieniowa.
 
