@@ -2,8 +2,7 @@ Projekt sklepu internetowego
 
 !OPIS DZIALANIA KLAS I INTERFEJSU!
 
-Struktura projektu
-Klasy i interfejsy
+
 - Product
 
 Klasa abstrakcyjna, bazowa dla wszystkich produktów.
