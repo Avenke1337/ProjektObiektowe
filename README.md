@@ -1,5 +1,6 @@
 Projekt sklepu internetowego
-OPIS DZIALANIA KLAS I INTERFEJSU
+
+!OPIS DZIALANIA KLAS I INTERFEJSU!
 
 Struktura projektu
 Klasy i interfejsy
