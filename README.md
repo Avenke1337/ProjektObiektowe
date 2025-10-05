@@ -71,7 +71,7 @@ Tworzy przykładowe produkty (Book, Electronics, Clothing), dodaje je do koszyka
 
 Dzialanie programu:
 1. Odpala sie menu z wyborem kategorii produktow/przejscia do koszyka
-2. Pokazuje sie lista produktow z danej kategorii
+2. Pokazuje sie lista produktow z danej kategorii (lub zrobimy podkategorie np. ubrania zimowe czy rozne typy ksiazek)
 3. Uzytkownik wybiera dany produkt
 4. wpisuje ilosc produktu
 5. dodaje produkt do koszyka
