@@ -1,2 +1,3 @@
-public class Book {
+public class Book extends Product {
+
 }
