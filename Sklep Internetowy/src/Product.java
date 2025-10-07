@@ -2,12 +2,14 @@ public class Product {
     private String name;
     private double price;
     private int ProductId;
+    private String category;
 
-//    public Product(String name, double price, int id){
-//        this.name = name;
-//        this.price = price;
-//        this.ProductId = id;
-//    }
+    public Product(String name, double price, int id, String category){
+        this.name = name;
+        this.price = price;
+        this.ProductId = id;
+        this.category = category;
+    }
 
     public String getName(){
         return name;
@@ -39,5 +41,11 @@ public class Product {
     }
 
 
+    public String getCategory() {
+        return category;
+    }
 
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }
