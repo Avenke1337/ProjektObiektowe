@@ -9,6 +9,7 @@ public class Electronics extends Product {
         this.type = type;
     }
     public static void displayElectronicsType(){
+        boolean isRunning = true;
         Scanner sc = new Scanner(System.in);
         System.out.println("Wybierz rodzaj produktow ");
         System.out.println("1. AGD");
@@ -18,7 +19,26 @@ public class Electronics extends Product {
         System.out.println("x. Wroc do menu glownego");
         System.out.print("Wybierz opcje: ");
         String option = sc.next();
-
+            switch(option){
+                case "1":
+                    //AGD
+                    break;
+                case "2":
+                    //RTV
+                    break;
+                case "3":
+                    //GAMING
+                    break;
+                case "4":
+                    //Telefony
+                    break;
+                case "x":
+                    Main.displayMenu();
+                    break;
+                default:
+                    System.out.println("Nieprawidlowa opcja");
+                    break;
+            }
 
     }
 }
