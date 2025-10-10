@@ -1,15 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Electronics extends Product {
     String brand;
     String type;
+    private static List<Electronics> electronicsList = new ArrayList<>();
+
     public Electronics(String name, double price, int id, String category, String brand, String type){
         super(name, price, id, category);
         this.brand = brand;
         this.type = type;
     }
+
+    public static void initializeProducts() {
+        if (electronicsList.isEmpty()) { // żeby nie duplikować przy ponownym wejściu
+            electronicsList.add(new Electronics("Pralka Samsung", 1899.99, 1, "Elektronika", "Samsung", "AGD"));
+            electronicsList.add(new Electronics("Lodówka LG", 2799.49, 2, "Elektronika", "LG", "AGD"));
+            electronicsList.add(new Electronics("Telewizor Sony 55\"", 3499.00, 3, "Elektronika", "Sony", "RTV"));
+            electronicsList.add(new Electronics("Soundbar JBL", 999.00, 4, "Elektronika", "JBL", "RTV"));
+            electronicsList.add(new Electronics("Konsola PlayStation 5", 2999.00, 5, "Elektronika", "Sony", "GAMING"));
+            electronicsList.add(new Electronics("Monitor ASUS 144Hz", 1099.00, 6, "Elektronika", "ASUS", "GAMING"));
+            electronicsList.add(new Electronics("iPhone 15", 4999.00, 7, "Elektronika", "Apple", "Telefony"));
+            electronicsList.add(new Electronics("Samsung Galaxy S24", 4499.00, 8, "Elektronika", "Samsung", "Telefony"));
+        }
+    }
+
+
+
     public static void displayElectronicsType(){
-        boolean isRunning = true;
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Wybierz rodzaj produktow ");
         System.out.println("1. AGD");
@@ -40,5 +60,15 @@ public class Electronics extends Product {
                     break;
             }
 
+    }
+    public static void showByType(String type) {
+        for (int i = 0; i < electronicsList.toArray().length; i++) {
+            Electronics electronics = electronicsList.get(i);
+            if (electronics.type.equals(electronics.type)) {
+                System.out.println(i + 1 + ". " + electronics);
+            }
+
+
+        }
     }
 }

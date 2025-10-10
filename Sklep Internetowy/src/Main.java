@@ -10,7 +10,9 @@ class Main{
 //       String email = sc.next();
 //       User user = new User(name, email);
 //       System.out.println(user);
+    Electronics.initializeProducts();
     displayMenu();
+
 
    }
     public static void displayMenu(){
