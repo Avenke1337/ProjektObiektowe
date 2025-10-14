@@ -11,6 +11,8 @@ class Main{
 //       User user = new User(name, email);
 //       System.out.println(user);
     Electronics.initializeProducts();
+    Clothing.initializeClothing();
+    Book.initializeBooks();
     displayMenu();
 
 
@@ -36,12 +38,12 @@ class Main{
                         case "1":
                             Electronics.displayElectronicsType();
                             break;
-//                       case "2":
-//                           Book.displayBookType();
-//                           break;
-//                       case "3":
-//                           Clothing.displayClothingType();
-//                           break;
+                       case "2":
+                           Book.displayBookType();
+                           break;
+                       case "3":
+                           Clothing.displayClothingType();
+                           break;
                         case "x":
                             isRunning = false;
                             break;
