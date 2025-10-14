@@ -47,7 +47,7 @@ public class Book extends Product {
                 // klasyka
                 break;
             case "3":
-                // fantasy
+                // bajka
                 break;
             case "x":
                 Main.displayMenu();
