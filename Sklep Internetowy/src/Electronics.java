@@ -29,7 +29,7 @@ public class Electronics extends Product {
 
 
     public static void displayElectronicsType(){
-
+        initializeProducts();
         Scanner sc = new Scanner(System.in);
         System.out.println("Wybierz rodzaj produktow ");
         System.out.println("1. AGD");
@@ -41,16 +41,16 @@ public class Electronics extends Product {
         String option = sc.next();
             switch(option){
                 case "1":
-                    //AGD
+                    showAvailableElectronicsByType("AGD");
                     break;
                 case "2":
-                    //RTV
+                    showAvailableElectronicsByType("RTV");
                     break;
                 case "3":
-                    //GAMING
+                    showAvailableElectronicsByType("GAMING");
                     break;
                 case "4":
-                    //Telefony
+                    showAvailableElectronicsByType("Telefony");
                     break;
                 case "x":
                     Main.displayMenu();
@@ -61,10 +61,10 @@ public class Electronics extends Product {
             }
 
     }
-    public static void showByType(String type) {
+    public static void showAvailableElectronicsByType(String type) {
         for (int i = 0; i < electronicsList.toArray().length; i++) {
             Electronics electronics = electronicsList.get(i);
-            if (electronics.type.equals(electronics.type)) {
+            if (electronics.type.equals(type)) {
                 System.out.println(i + 1 + ". " + electronics);
             }
 

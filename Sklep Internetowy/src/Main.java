@@ -49,6 +49,7 @@ class Main{
                             System.out.println("Nieprawidlowa opcja");
                             break;
                     }
+                    break;
                 case "x":
                     System.out.println("Do zobaczenia!");
                     isRunning = false;
