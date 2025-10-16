@@ -6,7 +6,7 @@ public class Electronics extends Product {
     String brand;
     String type;
     private static List<Electronics> electronicsList = new ArrayList<>();
-
+    static Scanner sc = new Scanner(System.in);
     public Electronics(String name, double price, int id, String category, String brand, String type){
         super(name, price, id, category);
         this.brand = brand;
@@ -30,7 +30,7 @@ public class Electronics extends Product {
 
     public static void displayElectronicsType(){
         initializeProducts();
-        Scanner sc = new Scanner(System.in);
+
         System.out.println("Wybierz rodzaj produktow ");
         System.out.println("1. AGD");
         System.out.println("2. RTV");
@@ -62,13 +62,17 @@ public class Electronics extends Product {
 
     }
     public static void showAvailableElectronicsByType(String type) {
+        List<Electronics> sortedElectronicsList = new ArrayList<>();
         for (int i = 0; i < electronicsList.toArray().length; i++) {
             Electronics electronics = electronicsList.get(i);
             if (electronics.type.equals(type)) {
                 System.out.println(i + 1 + ". " + electronics);
+                sortedElectronicsList.add(electronics);
             }
-
-
         }
+        System.out.println("Dodaj produkty do koszyka (wpisz numer produktu)");
+        int index = sc.nextInt();
+        Cart.addToCart(sortedElectronicsList.get(index - 1));
+
     }
 }

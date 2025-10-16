@@ -61,5 +61,6 @@ class Main{
                     break;
             }
         }
+        Cart.displayCart();
     }
 }
