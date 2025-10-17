@@ -1,3 +1,3 @@
 interface Discountable {
-    public void applyDiscount();
+    void applyDiscount();
 }

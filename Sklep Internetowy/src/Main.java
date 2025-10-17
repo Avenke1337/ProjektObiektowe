@@ -57,12 +57,26 @@ class Main{
                 case "2":
                     Cart.displayCart();
                     Cart.showTotalPrice();
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
+                    System.out.println("1. Usuwanie produktow z koszyka");
+                    System.out.println("2. Wroc do menu");
+                    option = sc.next();
+                    switch (option){
+                        case "1":
+                            System.out.println("Wybierz numer produktu ktory chcesz usunac");
+                             Cart.displayCart();
+                             int i = sc.nextInt();
+                             Cart.removeFromCart(Cart.cart.get(i - 1));
+                            System.out.println("Usunieto produkt z koszyka!");
+                            try {
+                                Thread.sleep(1500);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+                            displayMenu();
+                            break;
                     }
-                    displayMenu();
+                    break;
+
 
                 case "x":
                     System.out.println("Do zobaczenia!");

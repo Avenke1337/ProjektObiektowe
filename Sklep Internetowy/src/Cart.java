@@ -17,8 +17,14 @@ public class Cart extends Product {
         cart.remove(product);
     }
     public static void displayCart(){
-        for (Product product : cart){
-            System.out.println(product);
+        int counter = 1;
+        if(cart.isEmpty()){
+            System.out.println("Koszyk jest pusty");
+        }else {
+            for (Product product : cart) {
+                System.out.println(counter + ". " + product);
+                counter++;
+            }
         }
     }
     public static void showTotalPrice(){
@@ -27,5 +33,12 @@ public class Cart extends Product {
             suma += p.getPrice();
         }
         System.out.println("Łączna cena wszystkich produktów w koszyku: " +suma +"PLN");
+    }
+    public static double getTotalPrice(){
+        float suma = 0;
+        for (Product p : cart){
+            suma += p.getPrice();
+        }
+        return suma;
     }
 }
