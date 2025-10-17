@@ -73,6 +73,7 @@ public class Electronics extends Product {
         System.out.println("Dodaj produkty do koszyka (wpisz numer produktu)");
         int index = sc.nextInt();
         Cart.addToCart(sortedElectronicsList.get(index - 1));
+        Cart.displayCart();
 
     }
 }
