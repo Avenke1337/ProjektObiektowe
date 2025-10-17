@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Clothing extends Product{
+    static Scanner sc = new Scanner(System.in);
     String size;
     String brand;
     String type;
@@ -40,13 +42,13 @@ public class Clothing extends Product{
         String option = sc.next();
         switch(option){
             case "1":
-                //koszulki
+                showAvailableClothingByType("koszulki");
                 break;
             case "2":
-                //spodenki
+                showAvailableClothingByType("spodenki");
                 break;
             case "3":
-                //bluzy
+                showAvailableClothingByType("bluzy");
                 break;
             case "x":
                 Main.displayMenu();
@@ -55,5 +57,22 @@ public class Clothing extends Product{
                 System.out.println("Nieprawidlowa opcja");
                 break;
         }
+    }
+
+    public static void showAvailableClothingByType(String type) {
+        List<Clothing> sortedClothingList = new ArrayList<>();
+        int counter = 1;
+        for (int i = 0; i < clothingList.toArray().length; i++) {
+            Clothing clothing = clothingList.get(i);
+            if (clothing.type.equals(type)) {
+                System.out.println(counter+ ". " + clothing);
+                sortedClothingList.add(clothing);
+                counter++;
+            }
+        }
+        System.out.println("Dodaj produkty do koszyka (wpisz numer produktu)");
+        int index = sc.nextInt();
+        Cart.addToCart(sortedClothingList.get(index - 1));
+
     }
 }
