@@ -9,6 +9,7 @@ public class Cart extends Product {
         super(name, price, id, category);
     }
 
+
     public static void addToCart(Product product){
         cart.add(product);
     }
@@ -20,10 +21,11 @@ public class Cart extends Product {
             System.out.println(product);
         }
     }
-    public static void showTotalPrice{
-        int suma = 0;
+    public static void showTotalPrice(){
+        float suma = 0;
         for (Product p : cart){
-            suma += p.price;
+            suma += p.getPrice();
         }
+        System.out.println("Łączna cena wszystkich produktów w koszyku: " +suma +"PLN");
     }
 }

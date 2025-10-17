@@ -23,6 +23,8 @@ class Main{
         while (isRunning) {
             System.out.println("\nMenu:");
             System.out.println("1. Wyswietl dostepne kategorie");
+            System.out.println("2. Wyswietl koszyk");
+            System.out.println("3. Finalizacja zakupow");
             System.out.println("x: Wyjdz");
             System.out.print("Wybierz opcje: ");
             String option = sc.next();
@@ -52,6 +54,16 @@ class Main{
                             break;
                     }
                     break;
+                case "2":
+                    Cart.displayCart();
+                    Cart.showTotalPrice();
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    displayMenu();
+
                 case "x":
                     System.out.println("Do zobaczenia!");
                     isRunning = false;
@@ -61,6 +73,5 @@ class Main{
                     break;
             }
         }
-        Cart.displayCart();
     }
 }

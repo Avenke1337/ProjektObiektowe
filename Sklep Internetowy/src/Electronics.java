@@ -63,17 +63,20 @@ public class Electronics extends Product {
     }
     public static void showAvailableElectronicsByType(String type) {
         List<Electronics> sortedElectronicsList = new ArrayList<>();
+        int counter = 1;
         for (int i = 0; i < electronicsList.toArray().length; i++) {
             Electronics electronics = electronicsList.get(i);
             if (electronics.type.equals(type)) {
-                System.out.println(i + 1 + ". " + electronics);
+                System.out.println(counter + ". " + electronics);
                 sortedElectronicsList.add(electronics);
+                counter++;
             }
         }
         System.out.println("Dodaj produkty do koszyka (wpisz numer produktu)");
         int index = sc.nextInt();
         Cart.addToCart(sortedElectronicsList.get(index - 1));
         Cart.displayCart();
+        Cart.showTotalPrice();
 
     }
 }
